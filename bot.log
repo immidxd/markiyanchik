@@ -1,0 +1,1367 @@
+INFO:root:Бот стартовал
+INFO:apscheduler.scheduler:Scheduler started
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE4A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDE70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE2C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD900>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD900>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD900>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD900>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDA50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDA80>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD2D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD270>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD270>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD270>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD270>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDAE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDFF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECD0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE620>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE620>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE620>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE620>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE380>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEC50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEDA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEDA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEDA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEDA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEAD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEF50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF0A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF1F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF1F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF1F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF1F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEF20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF4F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF640>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF640>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF640>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF640>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF7F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF940>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECFA90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECFA90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECFA90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECFA90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF7C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF430>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE9B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE9B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE9B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECE9B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECFC10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECF0D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECEFE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+ERROR:telegram.ext.updater:Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDC30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDC30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDC30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00000222C4ECDC30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+INFO:root:Бот стартовал
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    engine="text-davinci-003",
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    engine="text-davinci-003",
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    engine="text-davinci-003",
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    engine="text-davinci-003",
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 26, in handle_message
+    user_id = update.message.from_user.id
+AttributeError: 'NoneType' object has no attribute 'from_user'
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('Одну минуту...')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 149, in create
+    ) = cls.__prepare_create_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 106, in __prepare_create_request
+    requestor = api_requestor.APIRequestor(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 131, in __init__
+    self.api_key = key or util.default_api_key()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\util.py", line 186, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 517, in request_raw
+    result = _thread_context.session.request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 30, in handle_message
+    response = openai.Completion.create(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 217, in request
+    result = self.request_raw(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\openai\api_requestor.py", line 529, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000021AA1BB5720>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/sendMessage
+WARNING:telegram.vendor.ptb_urllib3.urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000021AA1BB6EC0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s/getUpdates
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
+ERROR:telegram.ext.dispatcher:No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "c:\Users\immi\Desktop\tg_gPT\testbotgpt.py", line 29, in handle_message
+    update.message.reply_text('')
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\message.py", line 764, in reply_text
+    return self.bot.send_message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 513, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
+    result = super()._message(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 332, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+  File "C:\Users\immi\AppData\Local\Programs\Python\Python310\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+INFO:root:Bot started
+INFO:apscheduler.scheduler:Scheduler started
