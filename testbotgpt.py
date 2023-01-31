@@ -4,7 +4,7 @@ import openai
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 logging.basicConfig(filename='bot.log', level=logging.INFO)
-openai.api_key = "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"
+openai.api_key = os.getenv("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")
 
 def main():
     bot = Updater("5918531548:AAF0TSyU4ZCWf233cAJrVcmqHnQOtKgOn2s", use_context=True)
